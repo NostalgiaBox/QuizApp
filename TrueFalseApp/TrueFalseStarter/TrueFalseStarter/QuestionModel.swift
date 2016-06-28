@@ -8,18 +8,16 @@ class quizQuestion {
     var ans2 = "asd"
     var ans3 = "sad"
     var ans4 = "das"
-    var fourAnswers: Bool
-    var rightAns = 0
+        var rightAns = 0
     var wasAsked = false
     
     init(question: String, ans1: String, ans2: String,
-         ans3: String, ans4: String, fourAnswers: Bool, rightAns: Int){
+         ans3: String, ans4: String, rightAns: Int){
         self.question = question
         answers[0] = ans1
         answers[1] = ans2
         answers[2] = ans3
         answers[3] = ans4
-        self.fourAnswers = fourAnswers
         self.rightAns = rightAns
     }
     
@@ -32,9 +30,6 @@ class quizQuestion {
         return answers
     }
     
-    func isFourAnswers() -> Bool {
-        return fourAnswers
-    }
     
     func alreadyAsked() -> Bool {
         return wasAsked
@@ -55,11 +50,14 @@ class quizQuestion {
     }*/
 }
 
-let quizQuestions: [quizQuestion] = [quizQuestion(question: "What animal is donald duck", ans1: "Giraffe", ans2: "Turkey", ans3: "Cow", ans4: "Duck", fourAnswers: true, rightAns: 4),
-    quizQuestion(question: "What animal is goofy", ans1: "Giraffe", ans2: "Turkey", ans3: "Cow", ans4: "Dog", fourAnswers: true, rightAns: 4),
-    quizQuestion(question: "What animal is Mickey", ans1: "Mouse", ans2: "Turkey", ans3: "Cow", ans4: "", fourAnswers: true, rightAns: 1),
-    quizQuestion(question: "What animal is pluto", ans1: "Giraffe", ans2: "Dog", ans3: "Cow", ans4: "Duck", fourAnswers: true, rightAns: 2),
-    quizQuestion(question: "What animal is Oswald", ans1: "Giraffe", ans2: "Turkey", ans3: "Rabbit", ans4: "Duck", fourAnswers: true, rightAns: 3)
+let quizQuestions: [quizQuestion] = [quizQuestion(question: "What animal is donald duck", ans1: "Giraffe", ans2: "Turkey", ans3: "Cow", ans4: "Duck", rightAns: 4),
+    quizQuestion(question: "What animal is goofy", ans1: "Giraffe", ans2: "Turkey", ans3: "Cow", ans4: "Dog", rightAns: 4),
+    quizQuestion(question: "The Princess and The Frog was set in which US City?", ans1: "Chicago", ans2: "Baton Rouge", ans3: "New Orleans", ans4: "New York", rightAns: 3),
+    quizQuestion(question: "What animal is Mickey", ans1: "Mouse", ans2: "Turkey", ans3: "Cow", ans4: "", rightAns: 1),
+    quizQuestion(question: "What animal is pluto", ans1: "Giraffe", ans2: "Dog", ans3: "Cow", ans4: "Duck", rightAns: 2),
+    quizQuestion(question: "What animal is Oswald", ans1: "Giraffe", ans2: "Turkey", ans3: "Rabbit", ans4: "Duck", rightAns: 3),
+    quizQuestion(question: "The French version of Beauty and The Beast was called La Belle et La _______", ans1: "Beast", ans2: "Beat", ans3: "Ball", ans4: "Bete", rightAns: 4),
+    quizQuestion(question: "How many dwarves were in the Snow White tale?", ans1: "Seven", ans2: "Two", ans3: "Ten", ans4: "", rightAns: 1)
 ]
 
 class Quiz {
